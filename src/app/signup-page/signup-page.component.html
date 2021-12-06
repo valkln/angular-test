@@ -1,0 +1,44 @@
+<form class="form" [formGroup]="form" (ngSubmit)="submit()">
+	<h2>Sign Up</h2>
+	<div>
+		<mat-form-field class="full-width" appearance="fill">
+			<mat-label>Name</mat-label>
+			<input formControlName="name" matInput>
+			<mat-error *ngIf="form.get('name').touched && form.get('name').invalid ">
+				<span *ngIf="form.get('name').errors['minlength']">Minimal lenght is 6 symbols</span>
+				<span *ngIf="form.get('name').errors['required']">This field is required</span>
+			</mat-error>
+		</mat-form-field>
+	</div>
+	<div>
+		<mat-form-field class="full-width" appearance="fill">
+			<mat-label>Email</mat-label>
+			<input formControlName="email" type="email" matInput>
+			<mat-error *ngIf="form.get('email').touched && form.get('email').invalid ">
+				<span *ngIf="form.get('email').errors['email']">Email is incorrect</span>
+				<span *ngIf="form.get('email').errors['required']">This field is required</span>
+			</mat-error>
+		</mat-form-field>
+	</div>
+	<div>
+		<mat-form-field class="full-width" appearance="fill">
+			<mat-label>Password</mat-label>
+			<input formControlName="password" type="password" matInput>
+			<mat-error *ngIf="form.get('password').touched && form.get('password').invalid ">
+				<span *ngIf="form.get('password').errors['minlength']">Minimal lenght is 6 symbols</span>
+				<span *ngIf="form.get('password').errors['required']">This field is required</span>
+			</mat-error>
+		</mat-form-field>
+	</div>
+	<div>
+		<mat-form-field class="full-width" appearance="fill">
+			<mat-label>Re-type password</mat-label>
+			<input formControlName="repassword" type="password" matInput>
+			<mat-error *ngIf="form.get('repassword').touched && form.get('repassword').invalid ">
+				<span *ngIf="form.get('repassword').errors['matching']">Password must match</span>
+				<span *ngIf="form.get('repassword').errors['required']">This field is required</span>
+			</mat-error>
+		</mat-form-field>
+	</div>
+	<button type="submit" mat-raised-button color="primary" [disabled]="form.invalid || isSubmitting">Log In</button>
+</form>
