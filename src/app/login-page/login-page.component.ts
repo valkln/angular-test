@@ -29,7 +29,7 @@ export class LoginPageComponent implements OnInit {
       password: this.form.value.password,
       returnSecureToken: true
     }
-    /*this.auth.login(user).subscribe({
+    this.auth.login(user).subscribe({
       next: () => {
         this.form.reset
         this.router.navigate(['/'])
@@ -39,6 +39,6 @@ export class LoginPageComponent implements OnInit {
         console.log(err)
         this.isSubmitting = false
       }
-    })*/
+    })
   }
 }
