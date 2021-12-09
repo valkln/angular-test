@@ -1,18 +1,13 @@
 <div class="homepage">
 	<div class="sorting">
-		<div>
-			<h2>Categories</h2>
-			<ul>
-				<li>Shop by Brand</li>
-				<li>Home</li>
-				<li>Electronics</li>
-				<li>Health</li>
-				<li>Sports & Outdoors</li>
-			</ul>
-		</div>
-		<div>
-			<h2>Prices</h2>
-		</div>
+		<app-categories></app-categories>
+		<mat-divider></mat-divider>
+		<app-pricing></app-pricing>
+		<button mat-raised-button color="accent" (click)="resetQuery()">Reser Filter</button>
 	</div>
-	<div class="list">list of items</div>
+	<div class="list" *ngIf="products$ | async as products">
+		<app-item class="item" *ngFor="let product of products | brand:params | category:params | price:params "
+			[product]="product">
+		</app-item>
+	</div>
 </div>

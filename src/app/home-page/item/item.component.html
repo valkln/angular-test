@@ -1,0 +1,17 @@
+<mat-card>
+	<mat-card-content>
+		<div class="picture"><img src={{product.photo}} alt=""></div>
+		<div>
+			<span class="colors" *ngFor="let color of product.colors">
+				<mat-icon [style.color]=color>favorite</mat-icon>
+			</span>
+		</div>
+		<mat-card-title>{{product.name}}</mat-card-title>
+		<div class="price">${{product.price}} </div>
+		<div class="options">
+			<div *ngFor="let option of product.deliveryOptions">
+				{{option}}
+			</div>
+		</div>
+	</mat-card-content>
+</mat-card>

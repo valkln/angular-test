@@ -1,0 +1,22 @@
+<div>
+	<h2>Categories</h2>
+	<mat-accordion>
+		<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+			<mat-expansion-panel-header>
+				<mat-panel-title>
+					Brands
+				</mat-panel-title>
+			</mat-expansion-panel-header>
+			<button mat-raised-button (click)="setBrand('Apple')">Apple</button>
+			<button mat-raised-button (click)="setBrand('Samsung')">Samsung</button>
+			<button mat-raised-button (click)="setBrand('Orbea')">Orbea</button>
+			<button mat-raised-button (click)="setBrand('Aromatica')">Aromatica</button>
+		</mat-expansion-panel>
+	</mat-accordion>
+	<div>
+		<button mat-raised-button (click)="setCategory('home')">Home</button>
+		<button mat-raised-button (click)="setCategory('electronics')">Electronics</button>
+		<button mat-raised-button (click)="setCategory('health')">Health</button>
+		<button mat-raised-button (click)="setCategory('sport')">Sports & Outdoors</button>
+	</div>
+</div>

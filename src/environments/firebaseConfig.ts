@@ -5,7 +5,8 @@ export const firebaseConfig = {
 	projectId: "angular-test-337ed",
 	storageBucket: "angular-test-337ed.appspot.com",
 	messagingSenderId: "153355471684",
-	appId: "1:153355471684:web:b3bceae2946f7fb6082511"
+	appId: "1:153355471684:web:b3bceae2946f7fb6082511",
+	database: "https://angular-test-337ed-default-rtdb.europe-west1.firebasedatabase.app"
 };
 
 const app = initializeApp(firebaseConfig);
