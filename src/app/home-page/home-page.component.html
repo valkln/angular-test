@@ -5,9 +5,7 @@
 		<app-pricing></app-pricing>
 		<button mat-raised-button color="accent" (click)="resetQuery()">Reser Filter</button>
 	</div>
-	<div class="list" *ngIf="products$ | async as products">
-		<app-item class="item" *ngFor="let product of products | brand:params | category:params | price:params "
-			[product]="product">
-		</app-item>
+	<div *ngIf="products$ | async | name:params | brand:params | category:params | price:params as products">
+		<app-list [products]=products></app-list>
 	</div>
 </div>

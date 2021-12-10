@@ -10,14 +10,8 @@
 	</mat-form-field>
 	<button mat-raised-button color="primary" type="submit">Search</button>
 </form>
-<section>
-	<p>
-		<mat-checkbox (change)="setPrice(0, 500)">0-500$</mat-checkbox>
-	</p>
-	<p>
-		<mat-checkbox (change)="setPrice(500, 1000)">500$-1000$</mat-checkbox>
-	</p>
-	<p>
-		<mat-checkbox (change)="setPrice(1000)">1000$+</mat-checkbox>
-	</p>
-</section>
+<mat-radio-group>
+	<mat-radio-button value="0-500" (click)="setPrice(0, 500)">0-500$</mat-radio-button>
+	<mat-radio-button value="500-1000" (click)="setPrice(500, 1000)">500$-1000$</mat-radio-button>
+	<mat-radio-button value="1000+" (click)="setPrice(1000)">1000$+</mat-radio-button>
+</mat-radio-group>

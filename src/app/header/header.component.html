@@ -6,6 +6,7 @@
 			<mat-label>search</mat-label>
 			<input matInput [(ngModel)]="searchParams">
 		</mat-form-field>
+		<button mat-raised-button (click)="search()">OK</button>
 		<span class="spacer"></span>
 		<span *ngIf="!auth.isAuth(); else user">
 			<button mat-raised-button routerLink="/signup">Sign Up</button>

@@ -1,0 +1,9 @@
+<div>
+	<mat-paginator [length]="products.length" (page)="pageEvent = changePage($event)" [pageSize]="6"
+		[pageSizeOptions]="[6, 12, 24]" aria-label="Select page">
+	</mat-paginator>
+</div>
+<div class="list">
+	<app-item class="item" *ngFor="let product of pageSlice" [product]="product">
+	</app-item>
+</div>

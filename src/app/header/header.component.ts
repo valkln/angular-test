@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from './../shared/services/auth.service';
 import { ProductService } from './../shared/services/product.service';
 
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
   searchParams = ''
   constructor(
     public auth: AuthService,
-    private prod: ProductService
+    private router: Router
   ) { }
   ngOnInit() {
   }
@@ -20,6 +21,10 @@ export class HeaderComponent implements OnInit {
     this.auth.logout()
   }
   search() {
-    this.prod.search(this.searchParams)
+    this.router.navigate(['/'], {
+      queryParams: {
+        search: this.searchParams
+      }
+    })
   }
 }

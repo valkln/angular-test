@@ -19,6 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ItemComponent } from './home-page/item/item.component';
@@ -27,6 +29,8 @@ import { CategoriesComponent } from './home-page/categories/categories.component
 import { BrandPipe } from './shared/pipes/brand.pipe';
 import { CategoryPipe } from './shared/pipes/category.pipe';
 import { PricePipe } from './shared/pipes/price.pipe';
+import { NamePipe } from './shared/pipes/name.pipe';
+import { ListComponent } from './home-page/list/list.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,9 @@ import { PricePipe } from './shared/pipes/price.pipe';
     CategoriesComponent,
     BrandPipe,
     CategoryPipe,
-    PricePipe
+    PricePipe,
+    NamePipe,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +63,9 @@ import { PricePipe } from './shared/pipes/price.pipe';
     MatIconModule,
     MatExpansionModule,
     MatCheckboxModule,
-    MatDividerModule
+    MatDividerModule,
+    MatPaginatorModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
