@@ -3,7 +3,6 @@
 		<app-categories></app-categories>
 		<mat-divider></mat-divider>
 		<app-pricing></app-pricing>
-		<button mat-raised-button color="accent" (click)="resetQuery()">Reser Filter</button>
 	</div>
 	<div *ngIf="products$ | async | name:params | brand:params | category:params | price:params as products">
 		<app-list [products]=products></app-list>

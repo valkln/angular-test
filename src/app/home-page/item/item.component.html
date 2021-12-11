@@ -1,6 +1,6 @@
 <mat-card>
+	<div class="picture"><img src={{product.photo}} alt=""></div>
 	<mat-card-content>
-		<div class="picture"><img src={{product.photo}} alt=""></div>
 		<div>
 			<span class="colors" *ngFor="let color of product.colors">
 				<mat-icon [style.color]=color>favorite</mat-icon>

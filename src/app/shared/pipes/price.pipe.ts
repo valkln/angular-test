@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { Params } from '@angular/router';
 import { IProduct } from './../interfaces';
 
 @Pipe({
@@ -7,7 +7,6 @@ import { IProduct } from './../interfaces';
 })
 export class PricePipe implements PipeTransform {
   constructor(
-    private route: ActivatedRoute
   ) { }
   transform(products: IProduct[], params: Params): IProduct[] {
     let to = params['to']

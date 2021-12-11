@@ -7,20 +7,8 @@ import { IProduct } from '../interfaces';
 })
 export class BrandPipe implements PipeTransform {
   transform(products: IProduct[], params: Params): IProduct[] {
-    switch (params['brand']) {
-      default: return products
-      case 'Apple': {
-        return products = products.filter(p => p.brand === 'Apple')
-      }
-      case 'Samsung': {
-        return products = products.filter(p => p.brand === 'Samsung')
-      }
-      case 'Orbea': {
-        return products = products.filter(p => p.brand === 'Orbea')
-      }
-      case 'Aromatica': {
-        return products = products.filter(p => p.brand === 'Aromatica')
-      }
-    }
+    if (params['brand']) {
+      return products = products.filter(p => p.brand === params['brand'])
+    } else return products
   }
 }

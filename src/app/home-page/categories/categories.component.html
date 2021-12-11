@@ -1,5 +1,10 @@
 <div>
 	<h2>Categories</h2>
+	<div>
+		<button mat-raised-button (click)="setCategory('electronics')">Electronics</button>
+		<button mat-raised-button (click)="setCategory('health')">Health</button>
+		<button mat-raised-button (click)="setCategory('sport')">Sports & Outdoors</button>
+	</div>
 	<mat-accordion>
 		<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
 			<mat-expansion-panel-header>
@@ -13,9 +18,4 @@
 			<button mat-raised-button (click)="setBrand('Aromatica')">Aromatica</button>
 		</mat-expansion-panel>
 	</mat-accordion>
-	<div>
-		<button mat-raised-button (click)="setCategory('electronics')">Electronics</button>
-		<button mat-raised-button (click)="setCategory('health')">Health</button>
-		<button mat-raised-button (click)="setCategory('sport')">Sports & Outdoors</button>
-	</div>
 </div>

@@ -30,4 +30,8 @@ export class PricingComponent implements OnInit {
   search() {
     this.setPrice(this.form.value.from, this.form.value.to)
   }
+  resetQuery() {
+    this.router.navigate(['/'])
+    this.form.reset()
+  }
 }

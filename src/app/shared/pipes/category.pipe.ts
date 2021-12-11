@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { Params } from '@angular/router';
 import { IProduct } from './../interfaces';
 
 @Pipe({
@@ -7,20 +7,10 @@ import { IProduct } from './../interfaces';
 })
 export class CategoryPipe implements PipeTransform {
   constructor(
-    private route: ActivatedRoute
   ) { }
   transform(products: IProduct[], params: Params): IProduct[] {
-    switch (params['category']) {
-      default: return products
-      case 'electronics': {
-        return products = products.filter(p => p.category === 'electronics')
-      }
-      case 'health': {
-        return products = products.filter(p => p.category === 'health')
-      }
-      case 'sport': {
-        return products = products.filter(p => p.category === 'sport')
-      }
-    }
+    if (params['category']) {
+      return products = products.filter(p => p.category === params['category'])
+    } else return products
   }
 }

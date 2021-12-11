@@ -13,10 +13,10 @@ export class ListComponent implements OnInit, OnChanges {
   public pageSlice: IProduct[]
   constructor() { }
   ngOnChanges() {
-    this.pageSlice = this.products.slice(0, 6)
+    this.pageSlice = this.products.slice(0, 12)
   }
   ngOnInit(): void {
-    this.pageSlice = this.products.slice(0, 6)
+    this.pageSlice = this.products.slice(0, 12)
   }
   changePage(event: PageEvent) {
     console.log(event)

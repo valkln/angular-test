@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs';
 import { IProduct } from './../shared/interfaces';
 import { ProductService } from './../shared/services/product.service';
@@ -15,7 +14,6 @@ export class HomePageComponent implements OnInit {
   params: Params
   constructor(
     private prod: ProductService,
-    private router: Router,
     private route: ActivatedRoute
   ) {
   }
@@ -24,8 +22,5 @@ export class HomePageComponent implements OnInit {
     this.route.queryParams.subscribe(p => {
       this.params = p
     })
-  }
-  resetQuery() {
-    this.router.navigate(['/'])
   }
 }
