@@ -14,7 +14,7 @@ export class SignupPageComponent implements OnInit {
   isSubmitting = false
   constructor(
     private router: Router,
-    private auth: AuthService
+    public auth: AuthService
   ) { }
   ngOnInit() {
     this.form = new FormGroup({

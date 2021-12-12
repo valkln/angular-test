@@ -13,7 +13,7 @@ export class LoginPageComponent implements OnInit {
   isSubmitting = false
   constructor(
     private router: Router,
-    private auth: AuthService
+    public auth: AuthService
   ) { }
   ngOnInit(): void {
     this.form = new FormGroup({

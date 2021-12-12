@@ -1,27 +1,31 @@
-# AngularTest
+#Angular Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+Angular developer test task
 
-## Development server
+## Project Features
+Hosting, Authorization and products database - deployed at google firebase.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+App has client-side pagination and sorting.
 
-## Code scaffolding
+Filtering by each parameter is made via pipes in Homepage component, and then, in List component, resulting array of products is paginated.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+All pipes get filtering parameters from queryParams.
 
-## Build
+Filtles implemented: category, brand, price, name.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Items are categorized in database.
 
-## Running unit tests
+### Authorization
+Signing up using email and password.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+When signed up, user is automatically signed in by JWT.
 
-## Running end-to-end tests
+Signing in using email and password.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Logging out by nulling token.
 
-## Further help
+### UI
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Used UI library: Angular Material, Deep Purple & Amber predifined palette.
+
+Used CSS preprocessor: SCSS.

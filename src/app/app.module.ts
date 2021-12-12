@@ -23,7 +23,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRadioModule } from '@angular/material/radio';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ItemComponent } from './home-page/item/item.component';
+import { ItemComponent } from './home-page/list/item/item.component';
 import { PricingComponent } from './home-page/pricing/pricing.component';
 import { CategoriesComponent } from './home-page/categories/categories.component';
 import { BrandPipe } from './shared/pipes/brand.pipe';

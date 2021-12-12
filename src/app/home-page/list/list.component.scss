@@ -9,16 +9,19 @@ mat-paginator {
 	flex-wrap: wrap;
 }
 .item {
-	@media (max-width: 1920px) {
+	@media (min-width: 1441px) and (max-width: 1920px) {
 		width: 20%;
 	}
-	@media (max-width: 1440px) {
+	@media (min-width: 1200px) and (max-width: 1440px) {
 		width: 25%;
 	}
-	@media (max-width: 1024px) {
+	@media (min-width: 992px) and (max-width: 1199px) {
 		width: 33%;
 	}
-	@media (max-width: 768px) {
+	@media (min-width: 768px) and (max-width: 991px) {
 		width: 50%;
+	}
+	@media (max-width: 767px) {
+		width: 100%;
 	}
 }

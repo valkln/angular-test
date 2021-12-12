@@ -1,7 +1,8 @@
 <form class="form" [formGroup]="form" (ngSubmit)="submit()">
 	<h2>Log In</h2>
+	<div class="err" *ngIf="auth.error$ | async as err">{{err}}</div>
 	<div>
-		<mat-form-field class="full-width" appearance="fill">
+		<mat-form-field appearance="fill">
 			<mat-label>Email</mat-label>
 			<input formControlName="email" matInput>
 			<mat-error *ngIf="form.get('email').touched && form.get('email').invalid ">
@@ -11,7 +12,7 @@
 		</mat-form-field>
 	</div>
 	<div>
-		<mat-form-field class="full-width" appearance="fill">
+		<mat-form-field appearance="fill">
 			<mat-label>Password</mat-label>
 			<input formControlName="password" type="password" matInput>
 			<mat-error *ngIf="form.get('password').touched && form.get('password').invalid ">

@@ -3,8 +3,16 @@
 	grid-template: auto / 1fr 4fr;
 	width: 80%;
 	margin: 0 auto;
-	@media (max-width: 768px) {
+	@media (min-width: 1200px) {
+		width: 80%;
+		margin: 0 auto;
+	}
+	@media (min-width: 992px) and (max-width: 1199px) {
+		width: 90%;
+		margin: 0 auto;
+	}
+	@media (min-width: 768px) and (max-width: 991px) {
 		width: 100%;
-		margin: 0 10px;
+		margin: 0 15px;
 	}
 }

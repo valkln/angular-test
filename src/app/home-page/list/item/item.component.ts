@@ -8,7 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ItemComponent implements OnInit {
   @Input() product
   constructor() { }
-
   ngOnInit(): void {
   }
 
