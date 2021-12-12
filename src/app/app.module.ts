@@ -17,7 +17,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRadioModule } from '@angular/material/radio';
@@ -62,7 +61,6 @@ import { ListComponent } from './home-page/list/list.component';
     MatCardModule,
     MatIconModule,
     MatExpansionModule,
-    MatCheckboxModule,
     MatDividerModule,
     MatPaginatorModule,
     MatRadioModule
