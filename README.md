@@ -1,17 +1,19 @@
-#Angular Test
+# Angular Test
 
 Angular developer test task
+
+Hosted at: https://angular-test-337ed.web.app
 
 ## Project Features
 Hosting, Authorization and products database - deployed at google firebase.
 
-App has client-side pagination and sorting.
+App has client-side pagination and filters.
 
 Filtering by each parameter is made via pipes in Homepage component, and then, in List component, resulting array of products is paginated.
 
 All pipes get filtering parameters from queryParams.
 
-Filtles implemented: category, brand, price, name.
+Filters implemented: category, brand, price, name.
 
 Items are categorized in database.
 
@@ -26,6 +28,6 @@ Logging out by nulling token.
 
 ### UI
 
-Used UI library: Angular Material, Deep Purple & Amber predifined palette.
+Used UI library: Angular Material, Deep Purple & Amber predefined palette.
 
 Used CSS preprocessor: SCSS.
